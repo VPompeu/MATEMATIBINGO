@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf7e7;
+    background-image:
+        url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\
+            <text x='10' y='20' font-size='24' fill='%23d4c18a'>+</text>\
+            <text x='60' y='20' font-size='28' fill='%23d4c18a'>÷</text>\
+            <text x='20' y='70' font-size='26' fill='%23e0a83b'>×</text>\
+            <text x='80' y='80' font-size='30' fill='%23c9a04a'>=</text>\
+            <text x='40' y='110' font-size='22' fill='%23e0a83b'>√</text>\
+        </svg>");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    text-align: center;
+    padding: 1px;
+}
+
+.top-hero {
+    background: #e0a83b;
+    color: #fff;
+    padding: 18px 24px 16px;
+    border-radius: 14px;
+    width: fit-content;
+    margin: 12px auto 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.top-hero h1,
+.top-hero h3 {
+    margin: 6px 0;
+    color: #fff;
+}
+
+.numEntrada {
+    width: 50px;
+    height: 35px;
+    font-size: 18px;
+    text-align: center;
+    margin: 3px;
+    border: 2px solid #e0a83b;
+    border-radius: 5px;
+}
+
+.cartela {
+    max-width: 700px;         
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;    
+}
+
+.casa {
+    background: #fff;
+    border: 3px solid #e0a83b;
+    height: 90px;              /* mais alto */
+    width: 220px;               /* mais largo */
+    display: flex;
+    flex-direction: column;     
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 8px;
+    font-size: 26px;
+    cursor: pointer;
+    position: relative;
+}
+
+.casa .operador {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.casa[data-op="+"] .operador { color: #ff0000; }
+.casa[data-op="-"] .operador { color: #4aff02; }
+.casa[data-op="×"] .operador { color: #0088ff; }
+.casa[data-op="÷"] .operador { color: #fff200; }
+
+.casa .equacao {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.casa.ok {
+    background: #98e698;
+    border-color: green;
+}
+
+.painel {
+    background: #fff4c2;
+    border: 2px solid #e0a83b;
+    padding: 10px;
+    margin: 20px auto;
+    width: 500px;
+    font-size: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    width: 450px;
+    margin: 80px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #e0a83b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#valor1, #valor2 {
+    width: 120px;
+    height: 45px;
+    font-size: 22px;
+    text-align: center;
+    border: 2px solid #e0a83b;
+    border-radius: 8px;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+#opSimbolo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e0a83b;
+    margin: 0 15px;
+}
+
+#confirmar, #fechar {
+    padding: 12px 30px;
+    font-size: 18px;
+    margin: 20px 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#confirmar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#confirmar:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#fechar {
+    background-color: #f44336;
+    color: white;
+}
+
+#fechar:hover {
+    background-color: #da190b;
+    transform: scale(1.05);
+}
+
+#salvarNumeros{
+    background-color: #4CAF50;
+    margin-top: 15px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

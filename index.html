@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MATEMÁTIBINGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-hero">
+    <h1>MATEMÁTIBINGO</h1>
+    <h3>Digite os 9 números sorteados:</h3>
+</div>
+<div id="entradaNumeros">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada">
+</div>
+<button id="salvarNumeros">Salvar Números</button>
+
+<div id="numerosSorteados" class="painel"></div>
+
+<div class="cartela" id="cartela"></div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Montar Equação</h3>
+        <p id="operadorEscolhido"></p>
+
+        <input type="number" id="valor1" placeholder="Valor 1">
+        <span id="opSimbolo"></span>
+        <input type="number" id="valor2" placeholder="Valor 2">
+
+        <button id="confirmar">OK</button>
+        <button id="fechar">Cancelar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
