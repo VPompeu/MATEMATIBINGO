@@ -10,17 +10,18 @@
 <div class="top-hero">
     <h1>MATEMÁTIBINGO</h1>
     <h3>Digite os 9 números sorteados:</h3>
+    <button id="btnRegras" class="btn-regras">📖 Regras</button>
 </div>
 <div id="entradaNumeros">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
-    <input type="number" class="numEntrada">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
+    <input type="number" class="numEntrada" min="1" max="1000">
 </div>
 <button id="salvarNumeros">Salvar Números</button>
 
@@ -34,12 +35,60 @@
         <h3>Montar Equação</h3>
         <p id="operadorEscolhido"></p>
 
-        <input type="number" id="valor1" placeholder="Valor 1">
+        <input type="number" id="valor1" placeholder="Valor 1" step="1">
         <span id="opSimbolo"></span>
-        <input type="number" id="valor2" placeholder="Valor 2">
+        <input type="number" id="valor2" placeholder="Valor 2" step="1">
 
         <button id="confirmar">OK</button>
         <button id="fechar">Cancelar</button>
+    </div>
+</div>
+
+<!-- Modal de Regras -->
+<div id="modalRegras" class="modal">
+    <div class="modal-content modal-regras">
+        <h2>📋 Regras do MATEMÁTIBINGO</h2>
+        <button id="fecharRegras" class="btn-fechar-regras">✕</button>
+        
+        <div class="regras-content">
+            <h3>🎯 Objetivo do Jogo</h3>
+            <p><strong>Montar equações matemáticas cujos resultados correspondam aos números sorteados.</strong></p>
+            <p>Cada célula da cartela possui um operador fixo (+, −, ×, ÷). Você deve encontrar dois números que, quando operados, resultem em um dos números inseridos no início do jogo.</p>
+            
+            <h3>Como Jogar</h3>
+            <ol>
+                <li><strong>Inserir os Números Sorteados:</strong> Digite 9 números inteiros entre 1 e 1000</li>
+                <li><strong>Montar as Equações:</strong> Clique em uma célula da cartela e crie uma equação</li>
+                <li><strong>Validar:</strong> Se o resultado está entre os números sorteados, a célula fica verde ✅</li>
+            </ol>
+            
+            <h3>O Que É Permitido ✅</h3>
+            <ul>
+                <li>Números sorteados: <strong>1 a 1000</strong> (apenas inteiros positivos)</li>
+                <li>Valores nas equações: <strong>apenas números inteiros</strong> (sem vírgula)</li>
+                <li>Operadores: <strong>+ − × ÷</strong></li>
+                <li>Editar cada célula múltiplas vezes</li>
+            </ul>
+            
+            <h3>O Que NÃO É Permitido ❌</h3>
+            <ul>
+                <li>Inserir números negativos como sorteados</li>
+                <li>Inserir zero como número sorteado</li>
+                <li>Usar números com vírgula/decimais nas equações</li>
+                <li>Usar divisão por zero</li>
+                <li>Repetir o mesmo resultado em células diferentes</li>
+            </ul>
+            
+            <h3>Cores dos Operadores 🎨</h3>
+            <ul>
+                <li><span style="color:#ff0000">🔴 + (Adição) - Vermelho</span></li>
+                <li><span style="color:#4aff02">🟢 − (Subtração) - Verde</span></li>
+                <li><span style="color:#0088ff">🔵 × (Multiplicação) - Azul</span></li>
+                <li><span style="color:#fff200">🟡 ÷ (Divisão) - Amarelo</span></li>
+            </ul>
+        </div>
+        
+        <button id="ok-regras" class="btn-ok-regras">Entendi!</button>
     </div>
 </div>
 

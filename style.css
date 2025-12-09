@@ -24,12 +24,31 @@ body {
     width: fit-content;
     margin: 12px auto 16px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    position: relative;
 }
 
 .top-hero h1,
 .top-hero h3 {
     margin: 6px 0;
     color: #fff;
+}
+
+.btn-regras {
+    background-color: #fff;
+    color: #e0a83b;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-regras:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
 }
 
 .numEntrada {
@@ -93,7 +112,7 @@ body {
     border: 2px solid #e0a83b;
     padding: 10px;
     margin: 20px auto;
-    width: 500px;
+    width: 700px;
     font-size: 20px;
 }
 
@@ -185,4 +204,72 @@ body {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+
+/* Modal de Regras */
+.modal-regras {
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.modal-regras h2 {
+    color: #e0a83b;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-regras h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.regras-content ol,
+.regras-content ul {
+    text-align: left;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.regras-content li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 16px;
+}
+
+.btn-fechar-regras {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.btn-fechar-regras:hover {
+    color: #333;
+}
+
+.btn-ok-regras {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.btn-ok-regras:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
 }
